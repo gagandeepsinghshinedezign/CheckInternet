@@ -33,6 +33,8 @@ function checkInternet() {
   }
 }
 
+
+
 // Event listeners for online and offline events
 window.addEventListener('online', () => {
   console.log("Back online");
@@ -43,3 +45,7 @@ window.addEventListener('offline', () => {
   console.log("You are offline");
   checkInternet();
 });
+
+window.addEventListener('load', () => {
+    checkInternet(); // Check the current connection status
+  });
